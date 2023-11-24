@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArvoreBinaria.cpp">
+    <ClCompile Include="ArvoreAVL.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Nodo.cpp">
@@ -29,7 +29,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ArvoreBinaria.h">
+    <ClInclude Include="ArvoreAVL.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="Nodo.h">
@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="teste.txt" />
+    <Text Include="teste2.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

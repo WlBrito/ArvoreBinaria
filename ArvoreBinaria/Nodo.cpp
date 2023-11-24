@@ -1,13 +1,14 @@
-#include "ArvoreBinaria.h"
+
 #include "Nodo.h"
+
+using namespace std;
 
 Nodo::Nodo() {
     this->pai = NULL;
     this->esq = NULL;
     this->dir = NULL;
     // this->item = NULL;
-    this->nivel = 1;
-    
+    this->fator = 1;
 }
 
 Nodo::Nodo(Produto& p) {
@@ -15,7 +16,7 @@ Nodo::Nodo(Produto& p) {
     this->esq = NULL;
     this->item.copiar(p);
     this->dir = NULL;
-    this->nivel = 1;
+    this->fator = 0;
 }
 
 
@@ -24,7 +25,7 @@ Nodo::Nodo(const Nodo& outro) {
     this->item = outro.getItem();
     this->esq = outro.getEsq();
     this->dir = outro.getDir();
-    this->nivel = outro.getNivel();
+    this->fator = outro.getFator();
 
 }
 
@@ -59,12 +60,16 @@ Nodo* Nodo::getFilhoUnico() {
     }
 }
 
-void Nodo::setNivel(int nivel) {
-    this->nivel = nivel;
+void Nodo::imprimir() const {
+    cerr << "No(" << item.getId() << ", Esq->" << esq << ", Dir->" << dir << ")" << endl;
 }
 
-int Nodo::getNivel() const {
-    return nivel;
+void Nodo::setFator(int fator) {
+    this->fator = fator;
+}
+
+int Nodo::getFator() const {
+    return fator;
 }
 
 void Nodo::setDir(Nodo* dir) {
@@ -100,18 +105,9 @@ Nodo* Nodo::getPai() const {
     return pai;
 }
 
-void Nodo::setFator(int fator)
-{
-    this->fator = fator;
-}
-
-int Nodo::getFator()
-{
-    return fator;
-}
-
 /**
  * GETTERS e SETTERS
  */
+
 
 

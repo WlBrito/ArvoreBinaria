@@ -1,17 +1,16 @@
 
 
-#ifndef ARVOREBINARIA_H
-#define	ARVOREBINARIA_H
+#ifndef ARVOREAVL_H
+#define	ARVOREAVL_H
 
 #include "Produto.h"
 #include "Nodo.h"
 
-class ArvoreBinaria {
+class ArvoreAVL {
 private:
     int quant;
     Nodo* root;
 
-    int h;
     string textoSalvo = "";
 
     //metodos chamadas apenas pelos métodos internos da nossa classe
@@ -25,9 +24,9 @@ private:
     Nodo* maiorDescendente(Nodo* no);
 
 public:
-    ArvoreBinaria();
-    ArvoreBinaria(const ArvoreBinaria& outra);
-    virtual ~ArvoreBinaria();
+    ArvoreAVL();
+    ArvoreAVL(const ArvoreAVL& outra);
+    virtual ~ArvoreAVL();
 
     //Operacoes basicas
     void insert(Produto& p);
@@ -44,10 +43,13 @@ public:
 
     int getAltura(Nodo* no);
     int getFatorBalanceamento(Nodo* no);
-
-    void rotacaoUnica_EsqEsq(Nodo* P, Nodo* Q);
-
     void executaBalanceamento(Nodo* entrou);
+    Nodo* getP(Nodo*);
+    Nodo* getQ(Nodo* P);
+    void rotacaoUnica_EsqEsq(Nodo* P, Nodo* Q);
+    void rotacaoUnica_DirDir(Nodo* P, Nodo* Q);
+    void rotacaoDupla_DirEsq(Nodo* P, Nodo* Q, Nodo* R);
+    void rotacaoDupla_EsqDir(Nodo* P, Nodo* Q, Nodo* R);
 
     void loadProdutos();
     void saveProdutosArquivo();
@@ -57,16 +59,7 @@ public:
     int getQuant() const;
     void setRoot(Nodo* root);
     Nodo* getRoot() const;
-    Nodo* getP(Nodo* entrou);
-
-    Nodo* getQ(Nodo* p);
-
-    Nodo* getR(Nodo* q);
-    
-    void rotacaoUnica_DirDir(Nodo* p, Nodo* q);
-    void rotaDupla_DirEsq(Nodo* P, Nodo* Q, Nodo* R);
-    void rotaDupla_EsqDir(Nodo* P, Nodo* Q, Nodo* R);
 };
 
-#endif	/* ARVOREBINARIA_H */
+#endif	/* ARVOREAVL_H */
 

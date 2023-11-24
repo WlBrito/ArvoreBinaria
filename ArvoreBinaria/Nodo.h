@@ -10,7 +10,6 @@ private:
     Nodo* esq;
     Produto item;
     Nodo* dir;
-    int nivel;
     int fator;
 
 public:
@@ -27,15 +26,11 @@ public:
     void setPai(Nodo* pai);
     Nodo* getPai() const;
 
-    void setFator(int fator);
-    int getFator();
-
-    int getAltura(Nodo* no);
-
     Nodo* getFilhoUnico();
     int getNumeroFilhos();
-    void setNivel(int nivel);
-    int getNivel() const;
+    void setFator(int fator);
+    int getFator() const;
+    void imprimir() const;
 
 
 

@@ -44,8 +44,12 @@ void Produto::imprimir() const {
     cout << "-------------------------------------------\n";
 }
 
-void Produto::imprimirResumido() const {
+void Produto::imprimirLinear() const {
     cout << "{" << id << ", " << nome << ", " << custo << ", " << preco << ", " << estoque << "},";
+}
+
+void Produto::imprimirResumido() const {
+    cout << "{" << id << ", " << nome << "},";
 }
 
 string Produto::imprimirParaArquivo() const {

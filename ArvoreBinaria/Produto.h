@@ -27,6 +27,7 @@ public:
     Produto(const Produto& outro);
 
     void imprimir() const;
+    void imprimirLinear() const;
     void imprimirResumido() const;
     string imprimirParaArquivo() const;
     void preencher();

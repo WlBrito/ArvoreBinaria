@@ -127,18 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ArvoreBinaria.cpp" />
+    <ClCompile Include="ArvoreAVL.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Produto.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ArvoreBinaria.h" />
+    <ClInclude Include="ArvoreAVL.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="Produto.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="teste.txt" />
+    <Text Include="teste2.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
